@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La disnatía del sabor</title>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="/RESTAURANTES/Restaurante/css/style.css">
+    <style>
+      .centrado {
+        width: 200px; /* Ajusta el ancho según tus necesidades */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilos para el botón de envío */
+input[type="submit"] {
+  padding: 30px 50px; /* Ajusta el padding según tus necesidades */
+  background-color: #ddfa8f; /* Color de fondo del botón */
+  color: #121010; /* Color del texto */
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Efecto de transición en el color de fondo */
+  text-align: center;
+}
+
+/* Estilos para el botón de envío al pasar el cursor */
+input[type="submit"]:hover {
+  background-color: #af0b29; /* Cambia el color de fondo al pasar el cursor */
+}
+.admins {
+    background-image: url(https://th.bing.com/th/id/R.3d9064670ec4676eba8bf1663e65fc3b?rik=CZrsAWWYSy%2bnnQ&pid=ImgRaw&r=0);
+    background-position: center center;
+     background-size: cover;
+    text-align: center; /* Para centrar horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Para centrar verticalmente */
+    margin-top: 50px;
+}
+.label {
+    margin-bottom: 10px; /* Espacio entre el label y el input */
+}
+    </style>
+</head>
+
+<body>
+
+    <header class="l-header" id="header">
+
+        <nav class="nav tk-container">
+            <a href="#" class="nav_logo">La Dinastía Del Sabor</a>
+            <div class="nav_menu">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="#home" class="nav_link active-link">Inicio</a></li>
+                    <li class="nav_item"><a href="#about" class="nav_link">Nosotros</a></li>
+                    <li class="nav_item"><a href="#services" class="nav_link">Servicios</a></li>
+                    <li class="nav_item"><a href="#menu" class="nav_link">Menú</a></li>
+                    <li class="nav_item"><a href="#contact" class="nav_link">Contacto</a></li>
+                </ul>
+            </div>
+        
+
+            <div class="nav_toggle">
+                <i class="bx bx-menu"></i>
+            </div>
+        </nav>
+       
+    </header>
+
+    <main class="l-main">
+
+        <section class="home" id="home">
+            <div class="home_container tk_container tk-grid">
+                <div class="home_data">
+                    <h1 class="home_title">Comidas Gourmet</h1>
+                    <h2 class="home_subtitle">Deguste Mis Sabores<br>¡ENTRA YA¡</h2>
+                    <a href="#menu" class="button">Ver Menú</a>
+                </div>
+            </div>
+        </section>
+
+
+
+<div class="admins">
+
+
+
+             <form action="listarpedido.php">
+                <input type="submit" value="Imprimir pedidos" class="centrado">
+                </form>
+                <form action="borrarpedido.php" method="post">
+                   <br>
+                   <br>
+                    <input type="submit" value="pedido realizado" class="centrado">
+                    <input type="text" name="num_pedido" placeholder="ingrese n° de pedido"></p>
+                    </form>
+<br>
+                    <form action="modificarpedido.php" method="post">
+
+                        <input type="submit" value="modificar" class="centrado">
+                       
+
+                        <p>numero de pedido: <input type="text" name="menu_id"/p>
+                            <br>
+                            <label for="comidas">Seleccione el plato que desea:</label>
+                        <select id="nombre_plato" name="nombre_plato" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="Plato italiano de marisco y pescado">Plato italiano de marisco y pescado</option>
+                            <option value="Tapas de gourmet Príncipe">tapas de gourmet</option>
+                            <option value="Tacos de carne y puerco">tacos de carne y puerco</option>
+                            <option value="pizza">Pizza</option>
+                            <option value="HotDog">hot dog hawaiano</option>
+                            <option value="hamburguesa suiza">hamburguesa suiza</option>
+                            <option value="Medallones de filete con tocino">Medallones de filete con tocino</option>
+                            <option value="Tacos mexicanos con camarones">Tacos mexicanos con camarones</option>
+                            <option value="Lasaña tradicional de carne y pollo">Lasaña tradicional de carne y pollo</option>
+                            <option value="Pollo asado al limón con vegetales">Pollo asado al limón con vegetales</option>
+                            <option value="Espagueti a la bolognesa">Espagueti a la bolognesa</option>
+                            <option value="Bizcocho de queso y cerezas en taza">Bizcocho de queso y cerezas en taza</option>
+                            <option value="Pastel mil hojas">Pastel mil hojas</option>
+                            <option value="flan de coco">flan de coco</option>
+                          </select><br>
+
+                            <p>nueva descripcion : <input type="text" name="descripcion"/p>
+			
+                            <p>cantidad : <input type="text" name="cantidad" /p>
+                            <br><br>
+                        </form>
+                            
+            
+                       
+                    </div>
+        <section class="about section tk-container" id="about">
+            <div class="about_container tk-grid">
+                <div class="about_data">
+                    <span class="section-subtitle about_initial">Nosotros</span>
+                    <h2 class="section-title about_initial">La Dinastía Del Sabor<br> Encontrarás</h2>
+                    <p class="about_description">Diferentes y variadas comidas gourmet que preparamos con amor para degustar con conciencias</p>
+                    <a href="#menu" class="button">Explorar</a>
+                </div>
+                <div class="about_data">
+                    <img src="img/about.jpg" alt="" class="about_img">
+                </div>
+            </div>
+        </section>
+           
+
+
+
+
+
+
+
+
+
+        <section class="services section tk-container" id="services">
+            <span class="section-subtitle">Ofrecemos</span>
+            <h2 class="section-title">Nuestros increibles servicios</h2>
+            <div class="services_container tk-grid">
+                <div class="services_content">
+                    <img src="img/Vector01.svg" class="services_img" alt="">
+                    <h3 class="services_title">Pizza napolitana, con mozzarella</h3>
+                    <p class="services_description">Disfrute de esta versión mejor que la comida para llevar que está llena de ingredientes gourmet saludables.</p>
+                </div>
+                <div class="services_content">
+                    <img src="img/Vector02.svg" class="services_img" alt="">
+                    <h3 class="services_title">panchos calientes</h3>
+                    <p class="services_description">Para los panchos no hay límites, y prueba de ello es este irresistible pancho caliente estilo gourmet, perfecto para que lo prepares un fin de semana en casa o en una reunión. ¿Ya se se antojó? ¡VEN Y PRUÉBALO YA!</p>
+                </div>
+                <div class="services_content">
+                    <img src="img/Vector03.svg" class="services_img" alt="">
+                    <h3 class="services_title">La hamburguesa suiza</h3>
+                    <p class="services_description">Incorpora unos ingredientes especiales como los champiñones. Además de una alta dosis de queso, esta hamburguesa gourmet tiene como mejor aliado a unos champiñones que serán los encargados de darle un acabado distinto.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section tk-container" id="contact">
+            <div class="contact_container tk-grid">
+                <div class="contact_data"> 
+                    <span class="section-subtitle contact_initial">Hablanos</span>
+                    <h2 class="section-title contact_initial">Contáctenos</h2>
+                    <p class="contact_description">¡Nos encanta escuchar sobre nuestros cocineros aventureros!</p>
+                </div>
+                <div class="contact_button">
+                    <a href="https://api.whatsapp.com/send?phone=59830705100" class="button"><img src="img/WhatsApp_icon.png" class="whatsapp_icon.png" alt=""></a>
+                    
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer section tk-container">
+        <div class="footer_container tk-grid">
+            <div class="footer_content">
+                <a href="#" class="footer_logo">Redes Sociales</a>
+                <span class="footer_description">Siguenos</span>
+                <div>
+                    <a href="https://es-la.facebook.com/" class="footer_social"><i class="bx bxl-facebook"></i></a>
+                    <a href="https://www.instagram.com/" class="footer_social"><i class="bx bxl-instagram"></i></a>
+                    <a href="https://twitter.com/" class="footer_social"><i class="bx bxl-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer_content">
+                <h3 class="footer_title">Visítanos</h3>
+                <ul>
+                    <li><a href="https://www.google.com/maps/place/Centro+Comercial+Megamall/@9.0987531,-79.3516696,15z/data=!4m5!3m4!1s0x0:0xe28ae925d1149443!8m2!3d9.0987531!4d-79.3516696" class="footer_link">Calle 13, numero 5544, barrio bypass, Salto Uruguay</a></li>
+                    <li><a href="mailto:oscaryao99@gmail.com" class="footer_link">restaurantTonny@gmail.com</a></li>
+                    <li><a class="footer_link">093 70 51 00</a></li>
+                </ul>
+            </div>
+            <div class="footer_content">
+                <h3 class="footer_title">Horarios</h3>
+                <ul>
+                    <li><a class="footer_link">Lunes-Domingos</a></li>
+                    <li><a class="footer_link">11 AM-9 PM</a></li>
+                </ul>
+            </div>
+            <div class="footer_content">
+                <h3 class="footer_title">Autores</h3>
+                <ul>
+                    <li><a class="footer_link">ANTONNY ESCOBAL, Gerente</a></li>
+                </ul>
+            </div>
+           
+        </div>
+        <p class="footer_copy">&#169; 2023 La dísnatia del sabor. Todos los derechos reservados.</p>
+
+    </footer>
+    
+    
+</body>
+</html>
